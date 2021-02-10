@@ -1,0 +1,109 @@
+.profile {
+    background: #F8F8F8;
+    min-height: 100vh;
+}
+.profile .left {
+    position: fixed;
+    width: 15%;
+    top: 0;
+    float: left;
+    min-height: 100vh;
+    background: #011B33;
+    height: 100%;
+}
+
+.profile .left .logo {
+    /* margin-top: 25%; */
+    margin-bottom: 20%;
+}
+
+.profile-nav ul li {
+    padding: 15px 0;
+}
+
+.profile-nav ul li a {
+    color: #fff;
+    font-size: 115%;
+    text-decoration: none;
+}
+
+.profile-nav ul li a i {
+    margin-right: 10px;
+}
+
+
+.profile .right {
+    width: calc(100 - 15%);
+    margin-left: 15%;
+}
+
+
+.flex-2 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+.profile input[type="email"], input[type="text"], input[type="password"], select {
+    height: 2.5rem;
+    display: block;
+    width: 100%;
+    border-radius: 2px;
+    border: 1px solid #CED4DA;
+    padding: 0% 10px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 100%;
+    line-height: 150%;
+    margin-top: 5px;
+}
+
+.profile label {
+    font-size: 95%;
+    line-height: 150%;
+    margin-bottom: 15px;
+}
+
+.profile input[type="submit"] {
+    background: #17120F;
+    border: 1px solid #17120F;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 600;
+    line-height: 150%;
+    border-radius: 2px;
+    padding: 0;
+    width: 50%;
+    height: 65%;
+    margin-top: 11%;
+    margin-left: 15px;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+.profile .grid-4 {
+    grid-gap: 5px;
+}
+
+.profile .form {
+    margin-top: 10%;
+}
+
+h3.title {
+    font-size: 135%;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+
+
+.transactions {
+    margin-top: 5%;
+}
+
+.block {
+    width: 100%;
+    height: 3.5rem;
+    background: #fff;
+    border-bottom: 2px solid #F2F2F2;
+}

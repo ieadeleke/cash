@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <!-- <link rel="icon" href="%PUBLIC_URL%/favicon.ico" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Web site created using create-react-app" />
+    <!-- <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" /> -->
+
+    <link rel="stylesheet" href="css/table.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/prof.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
+
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
+    <title>React App</title>
+</head>
+
+<body>
+
+    <div class="profile">
+        <div class="">
+            <div class="left">
+                <div class="contain">
+                    <div class="">
+                        <a href="index.html"><img src="images/sec-logo.svg" alt="logo" class="logo"></a>
+                    </div>
+                    <div class="profile-nav">
+                        <!-- <button id="myBtn">Open Modal</button> -->
+                        <ul>
+                            <li><a href="" class="active"><i class="uil uil-create-dashboard"></i> Home</a></li>
+                            <li id="myBtn"><a href=""><i class="uil uil-transaction"></i> Create Transaction</a></li>
+                            <!-- <li><a href=""><i class="uil uil-money-withdrawal"></i> Withdrawals</a></li> -->
+                            <li><a href=""><i class="uil uil-signout"></i> Sign Out</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="block"></div>
+                <div class="contain">
+                    <div class="top">
+                        <h1>Home</h1>
+                        <div class="line"></div>
+                        <div class="grid-3">
+                            <div class="first">
+                                <h4><span>&#8358;</span>360,000</h4>
+                                <p>cash in</p>
+                            </div>
+                            <div class="second">
+                                <h4><span>&#8358;</span>380,000</h4>
+                                <p>cash out</p>
+                            </div>
+                            <div class="third">
+                                <h4>Tues Dec 05, 2021</h4>
+                                <p>next cashout date</p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="bottom" style="clear: both;">
+                        <h1>Transactions</h1>
+                        <div class="container-table100" style="margin-top: 1%;">
+                            <div class="wrap-table100">
+                                <div class="table100">
+                                    <table>
+                                        <thead>
+                                            <tr class="table100-head" style="border-bottom: 2px solid #F2F2F2">
+                                                <th class="column1"></th>
+                                                <th class="column2">Date</th>
+                                                <th class="column3">Transaction ID</th>
+                                                <th class="column4">Cash In</th>
+                                                <th class="column5">Accrued Reward</th>
+                                                <th class="column6">Accrued Cash</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr style="border-bottom: 2px solid #F2F2F2">
+                                                <td class="column1">1</td>
+                                                <td class="column2">2017-09-29 01:22</td>
+                                                <td class="column3">200398</td>
+                                                <td class="column4">200398</td>
+                                                <td class="column5">$999.00</td>
+                                                <td class="column6">1</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="column1">2</td>
+                                                <td class="column2">2017-09-29 01:22</td>
+                                                <td class="column3">200398</td>
+                                                <td class="column4">200398</td>
+                                                <td class="column5">$999.00</td>
+                                                <td class="column6">1</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="close">
+                    <i class="uil uil-times" class="close" style="float: right;"></i>
+                </div>
+                <div class="line" style="clear: both;"></div>
+            </div>
+            <form action="">
+                <div class="form-group">
+                    <label for="amount">Amount to pay</label>
+                    <input type="text" name="amount" id="amount" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="maturity">Maturity Period</label>
+                    <select name="maturity" id="maturity">
+                        <option value="15">15 days</option>
+                        <option value="30">30 days</option>
+                        <option value="60">60 days</option>
+                        <option value="90">90 days</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="reward">Accrued Reward</label>
+                    <input type="text" name="reward" id="reward" class="form-control">
+                </div>
+                <input type="submit" value="Pay Now">
+            </form>
+        </div>
+
+    </div>
+
+    <script>
+
+        document.querySelector('li#myBtn a').addEventListener('click', e => e.preventDefault() );
+
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on the button, open the modal
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>
